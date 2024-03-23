@@ -18,6 +18,10 @@ function calc_movement() {
 	hmove = right - left;
 	vmove = down - up;
 	
+	var _facing = (aim_dir < 90 || aim_dir > 270);
+	if _facing == 0 _facing = -1;
+	facing = _facing;
+	
 	if hmove != 0 || vmove != 0 {
 		var _dir = point_direction(0, 0, hmove, vmove);
 		
@@ -27,6 +31,9 @@ function calc_movement() {
 		x += hmove;
 		y += vmove;
 	}
+	
+	aim_dir = point_direction(x, y, mouse_x, mouse_y);
+	my_bow.image_angle = aim_dir;
 }
 
 
@@ -53,6 +60,15 @@ function collision() {
 	}
 }
 
+
+function anim() {
+	if hmove != 0 || vmove != 0 {
+		sprite_index = s_player_walk;
+	} else {
+		sprite_index = s_player_idle;
+	}
+	image_xscale = facing;
+}
 
 
 

@@ -5,7 +5,7 @@ get_input();
 
 calc_movement();
 
-
+anim();
 
 
 
