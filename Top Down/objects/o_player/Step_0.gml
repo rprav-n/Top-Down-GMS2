@@ -1,13 +1,19 @@
 
-reset_variables();
+switch(state) {
+	default:
+		reset_variables();
 
-get_input();
+		get_input();
 
-calc_movement();
+		calc_movement();
 
-check_fire();
+		check_fire();
 
-anim();
+		anim();
+	break;
+}
+
+
 
 
 

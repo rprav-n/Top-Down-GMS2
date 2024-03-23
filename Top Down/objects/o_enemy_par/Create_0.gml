@@ -1,3 +1,5 @@
+event_inherited();
+
 alert = false; // when we are chasing the player
 alert_dis = 160; // is distance we can start chasing player
 

@@ -1,5 +1,5 @@
+event_inherited();
 walk_spd = 1.5;
-facing = 1;
 
 // bow
 aim_dir = 0;
